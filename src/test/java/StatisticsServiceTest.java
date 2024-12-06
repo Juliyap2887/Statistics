@@ -8,7 +8,7 @@ public class StatisticsServiceTest {
     void shouldCalculateTotalSumSales() {
         StatisticsService service = new StatisticsService();
 
-        long sales[] = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
         long expectedSum = 181;
         long actualSum = service.calcSumSales(sales);
 
@@ -19,7 +19,7 @@ public class StatisticsServiceTest {
     void shouldCalculateAverageSumSales() {
         StatisticsService service = new StatisticsService();
 
-        long sales[] = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
         long expected = 15;
         long actual = service.findAverage(sales);
 
@@ -30,7 +30,7 @@ public class StatisticsServiceTest {
     void shouldCalcMonthMaxSales() {
         StatisticsService service = new StatisticsService();
 
-        long sales[] = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
         long expected = 8;
         long actual = service.findMaxSales(sales);
 
@@ -41,7 +41,7 @@ public class StatisticsServiceTest {
     void shouldCalcMonthMinSales() {
         StatisticsService service = new StatisticsService();
 
-        long sales[] = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
         long expected = 9;
         long actual = service.findMinSales(sales);
 
@@ -52,7 +52,7 @@ public class StatisticsServiceTest {
     void shouldCalcMonthsBelowAverage() {
         StatisticsService service = new StatisticsService();
 
-        long sales[] = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
         long expected = 5;
         long actual = service.countMonthsBelowAverage(sales);
 
@@ -63,7 +63,7 @@ public class StatisticsServiceTest {
     void shouldCalcMonthsAboveAverage() {
         StatisticsService service = new StatisticsService();
 
-        long sales[] = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
         long expected = 5;
         long actual = service.countMonthAboveAverage(sales);
 
