@@ -14,12 +14,12 @@ public class Main {
         long countMin = service.countMonthsBelowAverage(arr);
         long countMax = service.countMonthAboveAverage(arr);
 
-        System.out.println(sum);
-        System.out.println(sumAverage);
-        System.out.println(maxMonth);
-        System.out.println(minMonth);
-        System.out.println(countMin);
-        System.out.println(countMax);
+        System.out.println(sum + " sum");
+        System.out.println(sumAverage + " sumAverage");
+        System.out.println(maxMonth + " maxMonth");
+        System.out.println(minMonth + " minMonth");
+        System.out.println(countMin + " countMin");
+        System.out.println(countMax + " countMax");
     }
 
 }
