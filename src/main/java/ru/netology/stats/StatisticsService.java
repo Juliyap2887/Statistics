@@ -1,64 +1,60 @@
 package ru.netology.stats;
 
-import java.util.Arrays;
-
 public class StatisticsService {
 
-    public int calcSumSales(int[] sales) {
-        int sum = 0;
-        for (int sale : sales) {
-            sum += sale;
+    public long calcSumSales(long[] sales) {
+        long sum = 0;
+        for (int i = 0; i < sales.length; i++) {
+            sum += sales[i];
         }
         return sum;
     }
 
-    public int findAverage(int[] sales) {
+    public long findAverage(long[] sales) {
 
         return calcSumSales(sales) / sales.length;
     }
 
-    public int findMaxSales(int[] sales) {
-        int maxMonth = sales[0];
-        int month = 0;
-        for (int sale : sales) {
-            if (sale >= sales[maxMonth]) {
-                maxMonth = month;
+    public int findMaxSales(long[] sales) {
+        int maxMonth = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] >= sales[maxMonth]) {
+                maxMonth = i;
             }
-            month = month + 1;
         }
         return maxMonth + 1;
     }
 
-    public int findMinSales(int[] sales) {
-        int minMonth = sales[0];
-        int month = 0;
-        for (int sale : sales) {
-            if (sale <= sales[minMonth]) {
-                minMonth = month;
+    public int findMinSales(long[] sales) {
+        int minMonth = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= sales[minMonth]) {
+                minMonth = i;
             }
-            month = month + 1;
         }
         return minMonth + 1;
     }
 
-    public int countMonthsBelowAverage(int[] sales) {
-        int totalSales = Arrays.stream(sales).sum();
-        int averageSales = totalSales / sales.length;
+    public int countMonthsBelowAverage(long[] sales) {
+
+        long averageSales = findAverage(sales);
         int count = 0;
-        for (int sale : sales) {
-            if (sale < averageSales) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averageSales) {
                 count++;
             }
         }
         return count;
     }
 
-    public int countMonthAboveAverage(int[] sales) {
-        int totalSales = Arrays.stream(sales).sum();
-        int averageSales = totalSales / sales.length;
+    public int countMonthAboveAverage(long[] sales) {
+
+        long averageSales = findAverage(sales);
         int count = 0;
-        for (int sale : sales) {
-            if (sale > averageSales) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averageSales) {
                 count++;
             }
         }

@@ -1,18 +1,18 @@
 package ru.netology.stats;
-import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
         StatisticsService service = new StatisticsService();
-        int[] arr = {
+        long[] arr = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
-        int sum = service.calcSumSales(arr);
-        int sumAverage = service.findAverage(arr);
-        int maxMonth = service.findMaxSales(arr);
-        int minMonth = service.findMinSales(arr);
-        int countMin = service.countMonthsBelowAverage(arr);
-        int countMax = service.countMonthAboveAverage(arr);
+        long sum = service.calcSumSales(arr);
+        long sumAverage = service.findAverage(arr);
+        long maxMonth = service.findMaxSales(arr);
+        long minMonth = service.findMinSales(arr);
+        long countMin = service.countMonthsBelowAverage(arr);
+        long countMax = service.countMonthAboveAverage(arr);
 
         System.out.println(sum);
         System.out.println(sumAverage);
